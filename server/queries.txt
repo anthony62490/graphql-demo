@@ -1,0 +1,26 @@
+{
+  people {
+    name
+    height
+  }
+}
+
+{
+  query getOneItem($id: ID!) {
+    foodItem(id: $id) {
+      id
+      name
+      cat
+    }
+  }
+}
+
+Query Variables:
+{
+  "id: 4
+}
+
+{
+  "name": "Fish",
+  "cat": "Meat"
+}

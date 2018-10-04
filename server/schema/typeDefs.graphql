@@ -1,0 +1,23 @@
+type Person {
+  id: ID!
+  name: String!
+  height: Int
+  mass: Int
+}
+
+type FoodItem {
+  id: ID!
+  name: String!
+  cat: String!
+}
+
+type Query {
+  people: [Person!]!
+  foodItems: [FoodItem!]!
+  foodItem(id: ID!): FoodItem
+}
+
+type Mutation {
+  addFood(name: String!, cat: String!): [FoodItem!]!
+  deleteFood(id: ID!): [ID!]!
+}
